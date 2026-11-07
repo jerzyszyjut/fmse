@@ -1,0 +1,12 @@
+# full adder, s = a + b + c; lex, random variable order
+vars s1 a0 c0 u v b0 t s0
+order lex
+spec 2*s1 + s0 - (a0 + b0 + c0)
+-s0 + t + c0 - 2*t*c0
+-v + t*c0
+-u + a0*b0
+-t + a0 + b0 - 2*a0*b0
+-s1 + u + v - u*v
+a0^2 - a0
+b0^2 - b0
+c0^2 - c0

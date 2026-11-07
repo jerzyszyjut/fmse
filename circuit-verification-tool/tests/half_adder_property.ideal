@@ -1,0 +1,8 @@
+# half adder: the sum and the carry are never both 1; lex, every gate output larger than its inputs
+vars s1 s0 a0 b0
+order lex
+spec s0*s1
+-s0 + a0 + b0 - 2*a0*b0
+-s1 + a0*b0
+a0^2 - a0
+b0^2 - b0

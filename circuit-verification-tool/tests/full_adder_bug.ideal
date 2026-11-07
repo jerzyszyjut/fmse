@@ -1,0 +1,12 @@
+# full adder, s = a + b + c, BUGGY: s0 is an AND gate instead of an XOR gate; lex, every gate output larger than its inputs
+vars s1 v u s0 t a0 b0 c0
+order lex
+spec 2*s1 + s0 - (a0 + b0 + c0)
+-t + a0 + b0 - 2*a0*b0
+-s0 + t*c0
+-u + a0*b0
+-v + t*c0
+-s1 + u + v - u*v
+a0^2 - a0
+b0^2 - b0
+c0^2 - c0

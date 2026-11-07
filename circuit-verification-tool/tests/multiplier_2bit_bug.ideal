@@ -1,0 +1,17 @@
+# 2-bit multiplier of the lecture, BUGGY: s1 is an OR gate instead of an XOR gate
+vars s3 s2 s1 s0 c1 p11 p10 p01 p00 a1 a0 b1 b0
+order lex
+spec 8*s3 + 4*s2 + 2*s1 + s0 - (2*a1 + a0)*(2*b1 + b0)
+-s3 + p11*c1
+-s2 + p11 + c1 - 2*p11*c1
+-c1 + p01*p10
+-s1 + p01 + p10 - p01*p10
+-s0 + p00
+-p00 + a0*b0
+-p01 + a0*b1
+-p10 + a1*b0
+-p11 + a1*b1
+a1^2 - a1
+a0^2 - a0
+b1^2 - b1
+b0^2 - b0
